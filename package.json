@@ -1,0 +1,20 @@
+{
+  "name": "markdown",
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.10.5",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "vue-demo": "node scripts/vue-demo.cjs",
+    "node-demo": "node scripts/node-demo.cjs",
+    "push": "node scripts/publish.cjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.1.0",
+    "@types/node": "^20.9.4",
+    "eslint": "^8.54.0",
+    "shelljs": "^0.8.5"
+  }
+}

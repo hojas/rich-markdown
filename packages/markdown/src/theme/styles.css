@@ -1,0 +1,71 @@
+.markdown-body .markdown-video-js {
+  max-width: 100%;
+}
+
+.markdown-body .markdown-checker-item {
+  display: none;
+}
+
+/* 写两个 .markdown-body 是为了提高权重 */
+.markdown-body.markdown-body pre {
+  position: relative;
+  /* 使代码块在 light 模式下也保持 暗黑模式 */
+  color: #e6edf3;
+  background: #161b22;
+}
+
+.markdown-body pre .markdown-copy-code-button {
+  box-sizing: border-box;
+  direction: ltr;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: #1e1e20;
+  opacity: 0;
+  cursor: pointer;
+  background-image: url(../../assets/copy.svg);
+  background-position: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: border-color .25s,background-color .25s,opacity .25s;
+}
+
+.markdown-body pre .markdown-copy-code-button:hover {
+  border-color: rgba(82, 82, 89, .32)
+}
+
+.markdown-body pre:hover .markdown-copy-code-button {
+  opacity: 1;
+}
+
+.markdown-body pre:hover .markdown-copy-code-button.copied {
+  background-image: url(../../assets/copied.svg);
+  border-radius: 0 4px 4px 0;
+  border-color: rgba(82, 82, 89, .32);
+}
+
+.markdown-body pre:hover .markdown-copy-code-button.copied::before {
+  box-sizing: border-box;
+  position: relative;
+  top: -1px;
+  left: -66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(82, 82, 89, .32);
+  border-right: 0;
+  border-radius: 4px 0 0 4px;
+  width: 64px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(235, 235, 245, .6);
+  background-color: #1e1e20;
+  white-space: nowrap;
+  content: "Copied";
+}
